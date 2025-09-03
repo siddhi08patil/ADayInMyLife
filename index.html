@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon to Sun Transition</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .night-noon-box {
+      height: 100vh;
+      background: linear-gradient(to bottom, #000000, #0d1b2a); /* night gradient */
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .moon, .sun {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      right: 8%;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.3s ease;
+    }
+
+    .moon {
+      opacity: 1;
+      z-index: 2;
+      filter: drop-shadow(0 0 15px rgba(255,255,255,0.7)); /* glow */
+    }
+
+    .sun {
+      bottom: -150px;
+      opacity: 0;
+      z-index: 1;
+      filter: drop-shadow(0 0 25px rgba(255,223,0,0.9)); /* glow */
+    }
+
+    /* Stars */
+    .star {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 2s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.2; }
+      to { opacity: 1; }
+    }
+
+    .after-section {
+      height: 100vh;
+      background: white;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+    <!-----firt page grlll-->
+  <div class="night-noon-box">
+    <h1>Welcome , </h1>
+    <h1>Wanna see my regular rutine ?</h1>
+    <h2>Scroll To Continue</h2>
+    <img src="moon.png" style="height: 500px;width:500px" class="moon"/>
+    <img src="sun.png" class="sun"/>
+    
+    <!-- Stars -->
+    <div class="star" style="top:20%; left:30%"></div>
+    <div class="star" style="top:40%; left:70%"></div>
+    <div class="star" style="top:60%; left:20%"></div>
+    <div class="star" style="top:30%; left:50%"></div>
+    <div class="star" style="top:70%; left:80%"></div>
+  </div>
+
+
+<!----bedroom scene -->
+
+<div class="bedroom-whole">
+        <div class="container-bdrm">
+            <img src="table-chair.png" class="table-chair"/>
+            <img src="tree.png" class="tree"/>
+            <div class="bed-sleep">
+                <img src="bed.png" class="bed"/>
+                <img src="blanket.png" class="blanket"/>
+                <img src="rigby-noraml-cloths.png" class="rigby_sleeping"/>
+            </div>
+            <img src="lamp.png" class="lamp"/>
+            
+        </div>
+    </div>
+
+
+
+<!------------------------bathroom------------------------------------------->
+ <div class="main-div-bathroom">
+    <div class="upperpart">
+        <img src="bathroom-mirror.png" class="mirror"/>
+        <img src="bathroom-light.png" class="light"/>
+        <img src="bathroom-shelf.png" class="shelf"/>
+        <img src="bathroom-window.png" class="window"/>
+        <img src="bathroom-clock.png" class="clock"/>
+    </div>
+    <div class="lowerpart">
+        <img src="bathroom-sink.png" class="sink"/>
+        <img src="bath.png" class="bathtub" />
+        <img src="bthcrtn.png" class="bath-curtain"/>
+        <img src="bathroom-mat.png" class="mat"/>
+        <img src="bathroom-chair.png" class="bth-chair"/>
+    </div>
+    <img src="rigby-noraml-cloths.png" class="rigby_bathroom" alt="Rigby in Bath"/> 
+    </div>
+
+
+
+    <!----------------------room fresh -->
+  <div class="wholeroom">
+  <img src="cupboard.png" class="cupboard"/>
+  <img src="tieset.png" class="tieset"/>
+  <img src="mat2.png" class="mat2"/>
+  <img src="lampinroom.png" class="lampinroom"/>
+  
+  <!-- Rigby normal outfit -->
+  <img src="rigby-noraml-cloths.png" class="rigbyinroom"/> 
+  
+  <!-- Rigby school outfit (start hidden) -->
+  <img src="rigby-school.png" class="rigbyschool" style="opacity:0;"/>
+</div>
+
+
+<!----------------------------------kitchen wala part-->
+  <div class="kitchen-scene">
+    <div class="kitchen-top" style="background-color: #2b9370;height:35vh">
+      <img src="bathroom-window.png" alt="" class="wdkt">
+      <img src="knife.png" alt="" class="knife">
+      <img src="kitchen-shelf.png" alt="" class="ktshelf">
+    </div>
+    <div class="kitchen-bottom">
+      <img src="rigby-school.png" alt="" class="rigbykitchen">
+      <img src="kitchentable.png" alt="" class="kttable">
+      <img src="kitchen-rug.png" alt="" class="ktrug">
+      <img src="kitchen-counters.png" alt="" class="ktcounter">
+      <img src="bin.png" alt="" class="ktbin">
+    </div>
+  </div>
+<!----------------------wiating rigby-->
+<div class="gotoschoolroad">
+    <img src="rigby-school.png" class="rigbytoschool">
+    <img src="bus1.png" class="bus1"/>
+    <img src="bus2.png" class="bus2"/>
+   </div>
+
+
+
+
+  <!--roaddddd wala partt grl-->
+  <div class="bgpartBus">
+    <div class="road-color">
+    <div class="road-lines">
+        <div class="white-bar-left"></div>
+        <div class="white-bar-middle"></div>
+        <div class="white-bar-right"></div>
+    </div>
+    <div class="objects-on-road">
+        <img src="bus.png" class="bus"/>
+        <img src="obstacle.png" class="obstacle"/>
+        <img src="road-sign.png" class="road-sign"/>
+        <img src="trafic-light.png" class="traffic-light"/>
+    </div>
+    </div>
+    </div>
+<!-------------------------study room -->
+<div class="studyroom">
+    <div class="uprt">
+        <img src="bathroom-window.png" alt="" class="wd">
+        <img src="studyrm2.png" alt="" class="tb1">
+        <img src="studyrm1.png" alt="" class="tbch">
+        <img src="studyrm3.png" alt="" class="tb2">
+    </div>
+    <div class="lwrt">
+        <img src="lampinroom.png" alt="" class="lmp">
+        <img src="kitchen-rug.png" alt="" class="rg">
+        <img src="bathroom-chair.png" alt="" class="ch">
+    </div>
+    <img src="rigbystudy.png" alt="rigby" class="rigby">
+</div>
+
+
+  <!-------------------------rigbyhall-->
+  <div class="hall">
+        <img src="bathroom-window.png" alt="" class="windowinhall">
+        <img src="kitchen-rug.png" alt="" class="ktrg">
+        <img src="cp1.png" alt="" class="cp1">
+        <img src="tree.png" alt="" class="tree2">
+        <img src="cp2.png" alt="" class="cp2">
+        <img src="lampinroom.png" alt="" class="lamp3">
+        <img src="tv.png" alt="" class="tv">
+        <img src="rgby.png" alt="" class="rigbywithfrnd">
+     </div>
+<!---------------------------rigby sleep-->
+<div class="sleep-room">
+  <img src="sleeprigby.png" alt="" class="sleepingrgby">
+  <img src="rigby-school.png" alt="" class="rigbyschool">
+</div>
+
+    <!--------------------------------------------------------space part-->
+    <div class="dreamspace" id="dreamspace">
+    <!-- Planets and spaceship -->
+    <img src="planet-earth.png" class="earth">
+    <img src="saturn.png" class="saturn"/>
+    <img src="planet-venus.png" class="venus">
+    <img src="juan-spacesuit.png" class="juan">
+    <img src="planet-mercury.png" class="mercury">
+    <img src="spaceship1.png" class="spaceship1"/>
+  </div>
+
+
+
+<!---------------------------end-->
+ <div class="enddiv">
+  <div class="overlay"></div>
+  <div class="txt">
+    <p>this was all</p>
+    <p>thanks for being with me</p>
+  </div>
+</div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".night-noon-box",
+        start: "top top",
+        end: "+=100%",
+        scrub: true,
+        pin: true,
+      }
+    })
+    .to(".night-noon-box", { background: "linear-gradient(to bottom, #87CEEB, #fceabb)", duration: 1 })
+    .to("h1, h2", { color: "#222", duration: 1 }, "<")
+    .to(".moon", { y: -200, opacity: 0, duration: 1 }, "<")
+    .to(".sun", { y: "-50%", opacity: 1, duration: 1 }, "<")
+    .to(".star", { opacity: 0, duration: 1 }, "<");
+
+
+
+
+
+
+
+
+
+
+    /*
+    rigby bedroom gsap
+    
+    */
+
+gsap.registerPlugin(ScrollTrigger);
+
+const offRight = () => innerWidth * 1.4;
+const offLeft  = () => -innerWidth * 1.4;
+
+//////////////////////////////
+// BEDROOM
+//////////////////////////////
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".container-bdrm",
+    start: "top top",
+    end: "+=3000",
+    scrub: 1,
+    pin: true
+  },
+  defaults: { ease: "power4.inOut", duration: 3.5 },
+  invalidateOnRefresh: true
+});
+
+// Rigby wakes up
+tl.to(".rigby_sleeping", {
+  y: "-20%",           
+  scale: 1.05,
+  ease: "power2.out",
+  duration: 2.5
+}, 0.2)
+.to(".rigby_sleeping", {
+  left: "50%",
+  top: "55%",
+  xPercent: -50,
+  yPercent: -50,
+  rotation: 8,
+  scale: 1.2,
+  ease: "expo.inOut",
+  duration: 4
+}, ">")
+.to(".rigby_sleeping", {
+  rotation: 0,
+  scale: 1,
+  duration: 2.5,
+  ease: "elastic.out(1, 0.5)"
+}, ">");
+
+// Bedroom items drift out
+tl.to([".blanket", ".bed", ".table-chair", ".tree", ".lamp"], {
+  x: (i) => i % 2 === 0 ? offLeft() : offRight(),
+  opacity: 0,
+  ease: "expo.inOut",
+  duration: 4,
+  stagger: 0.35
+}, 0);
+
+// Rigby goes downward and disappears
+tl.to(".rigby_sleeping", {
+  y: "+=120%",   // push down
+  opacity: 0,    // fade out
+  ease: "power1.inOut",
+  duration: 5
+}, ">");
+
+
+//////////////////////////////
+// BATHROOM
+//////////////////////////////
+const offRightBath = () => innerWidth * 1.4;
+const offLeftBath  = () => -innerWidth * 1.4;
+const offDownBath  = () => innerHeight * 1.2;
+
+let tlBath = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".main-div-bathroom",
+    start: "top top",
+    end: "+=10000",   
+    scrub: 1,
+    pin: true
+  },
+  defaults: { ease: "power4.inOut", duration: 6 },
+  invalidateOnRefresh: true
+});
+
+// Bathroom items enter one by one
+tlBath.from(".mirror",      { x: offRightBath(), opacity: 0 }, 0.2)
+      .from(".light",       { x: offLeftBath(), opacity: 0 }, 0.4)
+      .from(".shelf",       { x: offRightBath(), opacity: 0 }, 0.6)
+      .from(".window",      { x: offLeftBath(), opacity: 0 }, 0.8)
+      .from(".clock",       { x: offRightBath(), opacity: 0 }, 1.0)
+      .from(".sink",        { x: offLeftBath(), opacity: 0 }, 1.2)
+      .from(".bathtub",     { x: offRightBath(), opacity: 0 }, 1.4)
+      .from(".bath-curtain",{ x: offRightBath(), opacity: 0 }, 1.6) // curtain comes from right
+      .from(".mat",         { x: offLeftBath(), opacity: 0 }, 1.8)
+      .from(".bth-chair",   { x: offRightBath(), opacity: 0 }, 2.0);
+
+// 🚿 Rigby enters from above into bathtub
+tlBath.fromTo(".rigby_bathroom", { 
+    y: "-120%", 
+    opacity: 0, 
+    scale: 0.8 
+  }, { 
+    y: "0%", 
+    opacity: 1, 
+    scale: 1, 
+    left: "50%", 
+    top: "60%",  // bathtub center
+    xPercent: -50, 
+    yPercent: -50, 
+    ease: "expo.out", 
+    duration: 6 
+}, ">+1");
+
+// 🚪 Bathroom items EXIT on scroll down
+tlBath.to(".mirror",      { x: offRightBath(), opacity: 0 }, "exit")
+      .to(".light",       { x: offLeftBath(), opacity: 0 }, "exit+=0.2")
+      .to(".shelf",       { x: offRightBath(), opacity: 0 }, "exit+=0.4")
+      .to(".window",      { x: offLeftBath(), opacity: 0 }, "exit+=0.6")
+      .to(".clock",       { x: offRightBath(), opacity: 0 }, "exit+=0.8")
+      .to(".sink",        { x: offLeftBath(), opacity: 0 }, "exit+=1.0")
+      .to(".bathtub",     { x: offRightBath(), opacity: 0 }, "exit+=1.2")
+      .to(".bath-curtain",{ x: offLeftBath(), opacity: 0 }, "exit+=1.4")
+      .to(".mat",         { x: offLeftBath(), opacity: 0 }, "exit+=1.6")
+      .to(".bth-chair",   { x: offRightBath(), opacity: 0 }, "exit+=1.8");
+
+// 🛑 Finally Rigby exits DOWN after all others are gone
+tlBath.to(".rigby_bathroom", { 
+    y: offDownBath(), 
+    opacity: 0, 
+    duration: 6, 
+    ease: "power4.inOut" 
+}, "exit+=2.2");
+/*
+////////////////////////////////
+changingroom gsap
+///////////////////////////////
+*/
+gsap.registerPlugin(ScrollTrigger);
+
+// Offscreen helper positions
+const offRightRoom = () => innerWidth * 1.5;
+const offLeftRoom  = () => -innerWidth * 1.5;
+const offTopRoom   = () => -innerHeight * 1.5;
+const offBottomRoom = () => innerHeight * 1.5;
+
+// Get mat position dynamically
+const mat = document.querySelector(".mat2");
+const matTop = mat.offsetTop; // Y position of mat for Rigby to stand
+const rigbyWidth = 180;
+const rigbyHeight = 250;
+
+// Room timeline
+let tlRoom = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".wholeroom",
+    start: "top top",
+    end: "+=6000",
+    scrub: 1,
+    pin: true
+  }
+});
+
+// ===== Room objects ENTER =====
+tlRoom.from(".cupboard", { x: offLeftRoom(), opacity: 0, duration: 2, ease: "power4.out" }, 0)
+      .from(".tieset",   { y: offTopRoom(), opacity: 0, duration: 2, ease: "power4.out" }, 0.2)
+      .from(".mat2",     { x: offRightRoom(), opacity: 0, duration: 2, ease: "power4.out" }, 0.4)
+      .from(".lampinroom",{ y: offBottomRoom(), opacity: 0, duration: 2, ease: "power4.out" }, 0.6);
+
+// ===== Normal Rigby ENTER from top and LAND on mat =====
+tlRoom.fromTo(".rigbyinroom", {
+    y: offTopRoom(),   // start offscreen top
+    opacity: 0,
+    width: rigbyWidth,
+    height: rigbyHeight,
+    left: "50%",
+    top: 0,
+    xPercent: -50,
+    position: "absolute"
+}, {
+    y: matTop - rigbyHeight, // land on mat
+    opacity: 1,
+    duration: 2,
+    ease: "power4.out",
+}, ">");
+
+// ===== Pause 2 seconds on mat =====
+tlRoom.to({}, { duration: 2 });
+
+// ===== Morph Normal Rigby into School Rigby =====
+tlRoom.to(".rigbyinroom", {
+    opacity: 0,
+    duration: 0.5,
+    onComplete: () => {
+        const schoolRigby = document.querySelector(".rigbyschool");
+        schoolRigby.style.opacity = 1;
+        schoolRigby.style.position = "absolute";
+        schoolRigby.style.left = "50%";
+        schoolRigby.style.top = matTop - rigbyHeight + "px";
+        schoolRigby.style.width = "220px";
+        schoolRigby.style.height = "300px";
+        schoolRigby.style.transform = "translateX(-50%)";
+    }
+}, ">0.2");
+
+// ===== Pause briefly with school Rigby visible =====
+tlRoom.to({}, { duration: 1 });
+
+// ===== Objects EXIT + School Rigby goes down =====
+// ===== Objects EXIT + School Rigby goes down (within room only) =====
+tlRoom.to(".cupboard", { x: offRightRoom(), opacity: 0, duration: 2, ease: "power4.in" }, ">")
+      .to(".tieset",   { y: offBottomRoom(), opacity: 0, duration: 2, ease: "power4.in" }, "<0.2")
+      .to(".mat2",     { x: offLeftRoom(), opacity: 0, duration: 2, ease: "power4.in" }, "<0.4")
+      .to(".lampinroom",{ y: offTopRoom(), opacity: 0, duration: 2, ease: "power4.in" }, "<0.6")
+      .to(".rigbyschool", { 
+          y: offBottomRoom(), 
+          opacity: 0, 
+          duration: 2, 
+          ease: "power4.in" 
+      }, "<0.8"); // <-- this will only happen during room scroll
+
+      ////////////////////////////////////
+      ////////////////////////////kitchen scene
+      ///////////////////////////////////
+       gsap.registerPlugin(ScrollTrigger);
+
+    // Helpers
+    const offRightd = () => innerWidth * 1.2;
+    const offLeftd  = () => -innerWidth * 1.2;
+
+    // Kitchen timeline
+    let tlKitchen = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".kitchen-scene",
+        start: "top top",
+        end: "+=8000",   // scroll length = smoothness
+        scrub: 1,
+        pin: true
+      }
+    });
+
+    // ===== ENTER (furniture) =====
+    tlKitchen.from(".wdkt",     { x: offRightd(), opacity: 0, ease: "power2.out" }, 0)
+             .from(".knife",    { x: offLeftd(),  opacity: 0, ease: "power2.out" }, 0)
+             .from(".ktshelf",  { x: offRightd(), opacity: 0, ease: "power2.out" }, 0)
+             .from(".kttable",  { x: offRightd(), opacity: 0, ease: "power2.out" }, 0)
+             .from(".ktrug",    { x: offLeftd(),  opacity: 0, ease: "power2.out" }, 0)
+             .from(".ktbin",    { x: offRightd(), opacity: 0, ease: "power2.out" }, 0)
+             .from(".ktcounter",{ x: offLeftd(),  opacity: 0, ease: "power2.out" }, 0);
+
+    // ===== RIGBY enters from top =====
+    tlKitchen.fromTo(".rigbykitchen",
+      { y: -innerHeight, opacity: 0 },
+      { y: 0, opacity: 1, duration: 2.5, ease: "power2.out" },
+      ">" // after furniture
+    );
+
+    // Pause (everyone together)
+    tlKitchen.to({}, { duration: 2 });
+
+    // ===== EXIT (furniture) =====
+    tlKitchen.to(".wdkt",      { x: offRightd(), opacity: 0, ease: "power2.in" }, "exit")
+             .to(".knife",     { x: offLeftd(),  opacity: 0, ease: "power2.in" }, "exit")
+             .to(".ktshelf",   { x: offRightd(), opacity: 0, ease: "power2.in" }, "exit")
+             .to(".kttable",   { x: offRightd(), opacity: 0, ease: "power2.in" }, "exit")
+             .to(".ktrug",     { x: offLeftd(),  opacity: 0, ease: "power2.in" }, "exit")
+             .to(".ktbin",     { x: offRightd(), opacity: 0, ease: "power2.in" }, "exit")
+             .to(".ktcounter", { x: offLeftd(),  opacity: 0, ease: "power2.in" }, "exit");
+
+    // ===== Rigby exits (bottom fade out) =====
+    tlKitchen.to(".rigbykitchen", {
+      y: innerHeight * 0.6,
+      opacity: 0,
+      duration: 2.5,
+      ease: "power2.in"
+    }, "exit"); // sync with others
+//////////////////////////////
+//wait for bus
+/////////////////////////////
+gsap.registerPlugin(ScrollTrigger);
+
+// helper positions
+const offRightschool = () => innerWidth + 900;   // offscreen right
+const offLeftschool  = () => -900;               // offscreen left
+
+// timeline for road scene
+let tlRoad = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".gotoschoolroad",
+    start: "top top",
+    end: "+=7000",     // ⬅️ longer scroll = slower overall animation
+    scrub: 1,
+    pin: true
+  }
+});
+
+// Bus1: from right → left (solid, fade only when off screen)
+tlRoad.fromTo(".bus1", 
+  { x: offRightschool(), opacity: 1 },
+  { x: offLeftschool(), opacity: 1, duration: 8, ease: "power1.inOut" }
+).to(".bus1", { opacity: 0, duration: 0.5 }, ">");
+
+// Bus2: from left → right
+tlRoad.fromTo(".bus2", 
+  { x: offLeftschool(), opacity: 1 },
+  { x: offRightschool(), opacity: 1, duration: 8, ease: "power1.inOut" },
+  ">1"
+).to(".bus2", { opacity: 0, duration: 0.5 }, ">");
+
+// Move + rotate (solid)
+tlRoad.to(".rigbytoschool", { 
+  rotation: 360,          
+  x: 350,                 
+  y: 320,                 
+  opacity: 1,             // stays fully visible
+  duration: 6,            
+  ease: "power2.inOut"
+}, ">1");
+
+// Fade out instantly once inside bus
+tlRoad.to(".rigbytoschool", { 
+  opacity: 0, 
+  duration: 0.5            // quick fade at the end
+});
+
+
+
+/*///////////////////////////////////
+roadpart gsap
+*/////////////////////////////////////
+
+    gsap.registerPlugin(ScrollTrigger);
+
+// Select elements
+let road = document.querySelector(".road-color");
+let bus  = document.querySelector(".bus");
+
+// Calculate road end position (height - bus height so it doesn’t overshoot)
+let roadEnd = road.offsetHeight - bus.offsetHeight;
+
+// Bus moves down the road and stops at the end
+gsap.to(".bus", {
+  top: roadEnd,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".road-color",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: true,
+  }
+});
+
+// Obstacle lane change
+let obstacle = document.querySelector(".obstacle");
+let offsetBefore = obstacle.offsetTop - 1500; // start 400px before obstacle
+let offsetAfter  = obstacle.offsetTop;       // finish at obstacle
+
+gsap.to(".bus", {
+  x: -450,
+  ease: "power2.inOut",
+  scrollTrigger: {
+    trigger: ".road-color",
+    start: offsetBefore + "px top",
+    end: offsetAfter + "px top",
+    scrub: true,
+    toggleActions: "play none none reverse"
+  }
+});
+
+///////////////////////////////////////
+///////////////////////////room study gsap
+/////////////////////////////////////////
+gsap.registerPlugin(ScrollTrigger);
+
+// Offscreen helper positions (studyroom specific)
+const offRightStudy = () => innerWidth * 1.5;
+const offLeftStudy  = () => -innerWidth * 1.5;
+
+// Studyroom timeline
+let tlStudy = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".studyroom",
+    start: "top top",
+    end: "+=9000",
+    scrub: 1,
+    pin: true
+  }
+});
+
+// ===== ENTER furniture =====
+tlStudy.from(".wd",   { x: offRightStudy(), opacity: 0, duration: 3, ease: "power2.out" }, 0)
+       .from(".tb1",  { x: offRightStudy(), opacity: 0, duration: 3, ease: "power2.out" }, 0.2)
+       .from(".tbch", { x: offLeftStudy(),  opacity: 0, duration: 3, ease: "power2.out" }, 0.4)
+       .from(".tb2",  { x: offRightStudy(), opacity: 0, duration: 3, ease: "power2.out" }, 0.6)
+       .from(".lmp",  { x: offLeftStudy(),  opacity: 0, duration: 3, ease: "power2.out" }, 0.8)
+       .from(".rg",   { x: offLeftStudy(),  opacity: 0, duration: 3, ease: "power2.out" }, 1.0)
+       .from(".ch",   { x: offRightStudy(), opacity: 0, duration: 3, ease: "power2.out" }, 1.2);
+
+// ===== Pause (everything stays in place) =====
+tlStudy.to({}, { duration: 4 });
+
+// ===== Rigby enters from left and walks on rug =====
+tlStudy.fromTo(".rigby", 
+  { x: offLeftStudy(), opacity: 0, bottom: 220, scale: 1 },
+  { x: 100, opacity: 1, bottom: 220, duration: 4, ease: "power1.inOut" },
+">"
+);
+
+// ===== Rigby walks left ↔ right until objects leave =====
+tlStudy.to(".rigby", {
+  x: 700,
+  duration: 6,
+  ease: "linear",
+  repeat: 3,   // walks left→right→left→right (you can adjust)
+  yoyo: true
+});
+
+// ===== EXIT furniture =====
+tlStudy.to(".wd",   { x: offLeftStudy(), opacity: 0, duration: 3, ease: "power2.in" }, ">")
+       .to(".tb1",  { x: offLeftStudy(), opacity: 0, duration: 3, ease: "power2.in" }, "<0.2")
+       .to(".tbch", { x: offRightStudy(),opacity: 0, duration: 3, ease: "power2.in" }, "<0.4")
+       .to(".tb2",  { x: offLeftStudy(), opacity: 0, duration: 3, ease: "power2.in" }, "<0.6")
+       .to(".lmp",  { x: offRightStudy(),opacity: 0, duration: 3, ease: "power2.in" }, "<0.8")
+       .to(".rg",   { x: offRightStudy(),opacity: 0, duration: 3, ease: "power2.in" }, "<1.0")
+       .to(".ch",   { x: offLeftStudy(), opacity: 0, duration: 3, ease: "power2.in" }, "<1.2");
+
+// ===== Rigby exits to bottom-left corner with spin =====
+tlStudy.to(".rigby", {
+  x: -200,
+  opacity: 0,
+  duration: 5,
+  ease: "power2.inOut"
+}, ">-2"); // overlaps slightly with furniture exit
+/////////////////////////
+////////////////////hall
+///////////////
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Create timeline
+let tl3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".hall",
+    start: "top top",
+    end: "+=3000", // scroll distance
+    scrub: true,
+    pin: true
+  }
+});
+
+// Animate elements from different directions
+tl3.from(".windowinhall", {x: -800, opacity: 0, duration: 1}, 0)
+  .from(".ktrg", {y: 800, opacity: 0, duration: 1}, 0)
+  .from(".cp1", {x: -900, opacity: 0, duration: 1}, 0)
+  .from(".tree2", {y: 900, opacity: 0, duration: 1}, 0)
+  .from(".cp2", {x: 1000, opacity: 0, duration: 1}, 0)
+  .from(".lamp3", {y: -800, opacity: 0, duration: 1}, 0)
+  .from(".tv", {x: -1000, opacity: 0, duration: 1}, 0)
+  .from(".rigbywithfrnd", {y: 1000, opacity: 0, duration: 1}, 0)
+
+  // stay together (pause effect)
+  .to({}, {duration: 2}) 
+
+  // go back opposite directions
+  .to(".windowinhall", {x: 800, opacity: 0, duration: 1}, "out")
+  .to(".ktrg", {y: -800, opacity: 0, duration: 1}, "out")
+  .to(".cp1", {x: 900, opacity: 0, duration: 1}, "out")
+  .to(".tree2", {y: -900, opacity: 0, duration: 1}, "out")
+  .to(".cp2", {x: -1000, opacity: 0, duration: 1}, "out")
+  .to(".lamp3", {y: 800, opacity: 0, duration: 1}, "out")
+  .to(".tv", {x: 1000, opacity: 0, duration: 1}, "out")
+  .to(".rigbywithfrnd", {y: -1000, opacity: 0, duration: 1}, "out");
+
+
+/////////////////////////////////////
+////////////////////////sleep
+//////////////////////////////////
+gsap.registerPlugin(ScrollTrigger);
+
+// Rigby-school animation (enter → wait → exit bottom-left corner)
+let tlRigbySchool = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".sleep-room",
+    start: "top top",
+    end: "+=5000",   // ⬅️ longer scroll = slower animation
+    scrub: true,
+    pin: true
+  }
+});
+
+// Enter from top
+tlRigbySchool.fromTo(".rigbyschool",
+  { y: -300, opacity: 0 },
+  { y: 150, opacity: 0.6, duration: 4, ease: "power2.out" } // translucent
+)
+
+// Pause in center
+.to(".rigbyschool", { duration: 3 })
+
+// Exit to bottom-left
+.to(".rigbyschool", { 
+  x: -1000,   // push left until outside
+  y: 1400,       // push to bottom
+  rotation: 360,
+  opacity: 0.4,         // still translucent
+  duration: 5,
+  ease: "power2.inOut"
+});
+
+
+
+
+
+////////////////////////////////////////
+////space
+/////////////////////////
+(function () {
+    const space = document.querySelector('.dreamspace');
+    const STAR_COUNT = 220; // increase/decrease as you like
+
+    for (let i = 0; i < STAR_COUNT; i++) {
+      const s = document.createElement('i');
+      s.className = 'star';
+      const size = 1 + Math.random() * 2.5; // 1–3.5px
+      s.style.width = size + 'px';
+      s.style.height = size + 'px';
+      s.style.top = (Math.random() * 100) + '%';
+      s.style.left = (Math.random() * 100) + '%';
+      // different blink speeds & phase so it feels natural
+      s.style.setProperty('--tw', (1.4 + Math.random() * 3.6) + 's');
+      s.style.animationDelay = (Math.random() * 4) + 's';
+      space.appendChild(s);
+    }
+  })();
+  // === SHOOTING STARS ===
+(function shootingStars() {
+  const space = document.querySelector('.dreamspace');
+
+  function createShootingStar() {
+    const star = document.createElement('div');
+    star.className = 'shooting-star';
+    star.style.top = Math.random() * 60 + '%';   // random vertical position
+    star.style.left = (40 + Math.random() * 60) + '%'; // random horizontal start
+    space.appendChild(star);
+
+    setTimeout(() => star.remove(), 1200);
+  }
+
+  setInterval(() => {
+    if (Math.random() < 0.5) { 
+      createShootingStar();
+    }
+  }, 2000);
+})();
+gsap.registerPlugin(ScrollTrigger);
+
+let tl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".dreamspace",
+    start: "top top",
+    end: "+=8000",       
+    scrub: true,
+    pin: ".dreamspace",  
+  }
+});
+
+tl2.fromTo(".juan",
+  { x: "-120vw", y: "-100vh", rotation: 0, opacity: 1 },
+  { x: "0vw", y: "0vh", rotation: 360, duration: 5, ease: "power2.inOut" } 
+);
+
+tl2.to(".juan",
+  { x: "0vw", y: "0vh", rotation: 0, duration: 5, ease: "none" } 
+);
+
+tl2.to(".juan",
+  { x: "120vw", y: "100vh", rotation: 360, opacity: 0, duration: 5, ease: "power2.inOut" } 
+);
+
+
+
+
+///////////////////////
+// END PART
+///////////////////////
+gsap.registerPlugin(ScrollTrigger);
+
+let tl4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".enddiv",
+    start: "top top",
+    end: "+=8000",   // long scroll for buttery smooth
+    scrub: 1,
+    pin: true,
+  }
+});
+
+// 1. Background fade to black
+tl4.to(".overlay", { opacity: 1, ease: "power1.inOut", duration: 4 }, 0);
+
+// 2. Text appears slowly (small → normal, wide spacing → normal spacing)
+tl4.fromTo(".txt", 
+  { opacity: 0, scale: 0.6, letterSpacing: "10px" }, 
+  { opacity: 1, scale: 1, letterSpacing: "2px", ease: "power3.out", duration: 6 }, 
+  "+=1"
+);
+
+// 3. Pause on screen (viewer reads calmly)
+tl4.to({}, { duration: 3 });
+
+// 4. Fade everything away gently
+tl4.to(".txt", { opacity: 0, scale: 0.8, ease: "power2.inOut", duration: 4 }, ">")
+   .to(".overlay", { opacity: 0, duration: 4 }, "<");
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,759 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.after-section {
+  height: 100vh;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Background road part (unchanged) */
+.bgpartBus {
+  background-color: rgb(211, 165, 105);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.road-color {
+  background-color: rgb(70, 70, 70);
+  height: 5000px;
+  width: 900px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.road-lines {
+  display: flex;
+  flex-direction: row;
+}
+
+.white-bar-left {
+  background-color: white;
+  height: 100%;
+  width: 17px;
+  margin-left: 20px;
+}
+
+.white-bar-middle {
+  background: repeating-linear-gradient(
+    to bottom,
+    white,
+    white 140px,
+    transparent 140px,
+    transparent 280px
+  );
+  width: 17px;
+  height: 100%;
+  margin-left: 400px;
+}
+
+.white-bar-right {
+  background-color: white;
+  height: 100%;
+  width: 17px;
+  margin-left: 405px;
+}
+
+.objects-on-road {
+  display: flex;
+  position: relative;
+}
+
+.bus {
+  position: absolute;
+  height: 450px;
+  width: 250px;
+  margin-left: -350px;
+  margin-top: -0px;
+}
+
+.obstacle {
+  height: 600px;
+  width: 430px;
+  margin-left: -420px;
+  margin-top: 3000px;
+}
+
+.road-sign {
+  height: 500px;
+  width: 400px;
+  margin-left: -450px;
+  margin-top: 3650px;
+}
+
+.traffic-light {
+  height: 300px;
+  width: 100px;
+  margin-left: -450px;
+  margin-top: 3900px;
+}
+
+/* ========== BEDROOM ========== */
+.container-bdrm {
+  display: flex;
+  flex-direction: row;
+  background-color: #d89c9c;
+}
+
+/* Bed group */
+.bed-sleep {
+  position: relative;
+  width: 800px;   /* match bed */
+  height: 700px;  /* match bed */
+  margin-left: 250px;
+  margin-top: 100px;
+}
+
+/* Bed image */
+.bed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+/* Rigby inside bed */
+.rigby_sleeping {
+  position: absolute;
+  bottom: 200px;   /* adjust until correct */
+  left: 250px;
+  height: 300px;
+  z-index: 2;      /* above bed */
+}
+
+/* Blanket over Rigby */
+.blanket {
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  width: 600px;
+  height: 300px;
+  z-index: 3;
+}
+
+/* Other objects in room */
+.table-chair {
+  height: 400px;
+  width: 400px;
+  margin-left: 100px;
+  margin-top: 60px;
+}
+
+.lamp {
+  height: 400px;
+  width: 300px;
+  margin-top: 30px;
+  margin-left: -220px;
+}
+
+.tree {
+  height: 250px;
+  width: 150px;
+  margin-left: -500px;
+  margin-top: 470px;
+}
+.main-div-bathroom {
+ width: 100%;
+  height: 100vh;
+  background-color: #e9ebef;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+.upperpart{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(84, 120, 108);
+}
+.mirror{
+  height: 280px;
+  width: 200px;
+  margin-top: 0px;
+  margin-left: 50px;
+}
+.light{
+  height: 120px;
+  width: 100px;
+  margin-top: 0px;
+  margin-left: 360px;
+}
+.shelf{
+  height: 90px;
+  width: 100px;
+  margin-top: 210px;
+  margin-left: 200px;
+}
+.window{
+  height: 200px;
+  width: 150px;
+  margin-top: 100px;
+  margin-left: 0px;
+}
+.clock{
+  height: 100px;
+  width: 100px;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+.lowerpart{
+  display: flex;
+  flex-direction: row;
+}
+.sink{
+  height: 300px;
+  width: 220px;
+  margin-top: 50px;
+  margin-left: 200px;
+}
+.bathtub{
+  height: 450px;
+  width: 400px;
+  margin-top: -140px;
+  margin-left: 200px;
+  position: relative;
+  z-index: 3; 
+}
+.bath-curtain {
+  position: absolute;
+  height: 500px;   /* adjust to fit */
+  width: 300px;
+  top: 120px;      /* tweak to align with bathtub */
+  left: -350px;    /* start off-screen left */
+  z-index: 4;      /* above bathtub, below Rigby */
+}
+
+.mat{
+  height: 300px;
+  width: 300px;
+  margin-top: 110px;
+  margin-left: -360px;
+  position: relative;
+  z-index: 1; 
+}
+.bth-chair{
+  height: 250px;
+  width: 120px;
+  margin-top: 100px;
+  margin-left: 250px;
+}
+/* Rigby characters */
+/* .rigby_sleeping, */
+.rigby_bathroom {
+  position: absolute;
+  width: 200px; /* adjust as needed */
+  z-index: 1;
+}
+
+/* Bathroom Rigby starts hidden above */
+.rigby_bathroom {
+  left: 50%;
+  top: -30%; /* start above bathroom */
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.bath-curtain{
+  height: 450px;
+  width: 500px;
+  margin-left: 900px;
+  margin-top: 40px;
+}
+
+.wholeroom {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(112, 62, 101);
+  position: relative; /* container for absolute children */
+}
+
+.cupboard {
+  position: absolute;
+  height: 500px;
+  width: 400px;
+  left: 150px;
+  top: 60px;
+}
+
+.tieset {
+  position: absolute;
+  left:120px;
+  top: 100px;
+}
+
+.mat2 {
+  position: absolute;
+  height: 200px;
+  width: 500px;
+  left: 40%;
+  top: 450px;
+}
+
+.lampinroom {
+  position: absolute;
+  height: 300px;
+  width: 150px;
+  left: 75%;
+  top: 200px;
+}
+
+
+.wholeroom {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(112, 62, 101);
+  position: relative; /* parent for absolute children */
+}
+
+.cupboard, .tieset, .mat2, .lampinroom, .rigbyinroom, .rigbyschool {
+  position: absolute;
+}
+
+.cupboard { left: 150px; top: 60px; width: 400px; height: 500px; }
+.tieset { left: 120px; top: 100px; }
+.mat2 { left: 40%; top: 450px; width: 500px; height: 200px; }
+.lampinroom { left: 75%; top: 200px; width: 150px; height: 300px; }
+.rigbyinroom, .rigbyschool { width: 180px; height: 250px; left: 50%; top: 65%; transform: translateX(-50%); }
+.gotoschoolroad{
+  height: 100vh;
+  width: 100%;
+  background-image: url('newbg.jpg');
+  background-size: cover;      
+  background-repeat: no-repeat; 
+  background-position: center;
+}
+.bus1{
+  height: 550px;
+  width: 850px;
+  margin-top: 130px;
+}
+.bus2 {
+  height: 550px;      /* keep size consistent with .bus */
+  width: 850px;
+  position: absolute; /* important so GSAP moves it smoothly */
+  top: 130px;         /* align with bus1 */
+  left: 0;            /* starting point controlled by GSAP */
+}
+.rigbytoschool {
+  height: 200px;
+  width: 150px;
+  position: absolute;
+  left: 600px;
+  top: 250px;   /* ⬅️ higher, so he’s on the other side of road */
+}
+ .dreamspace{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(29, 29, 70);
+    display: flex;
+    flex-direction: row;
+    /* extra (does NOT affect layout) */
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at 50% 120%, #0b1530 0%, #030812 45%, #000 100%); /* space-y */
+  }
+
+  .earth{
+    height: 200px;
+    width: 200px;
+    margin-top: 350px;
+    margin-left: 150px;
+  }
+  .saturn{
+    height: 100px;
+    width: 150px;
+    margin-top: 550px;
+    margin-left: 150px;
+  }
+  .spaceship1{
+    height: 200px;
+    width: 350px;
+    margin-top: 30px;
+    margin-left: -40px;
+    rotate: 10deg;
+  }
+  .venus{
+    height: 80px;
+    width: 80px;
+    margin-top: 70px;
+    margin-left: -50px;
+  }
+  .mercury{
+    height: 120px;
+    width: 120px;
+    margin-top: 460px;
+    margin-left: 160px;
+  }
+  .juan{
+    margin-left: 60px;
+    height: 320px;
+    width: 180px;
+    margin-top: 180px;
+    position: relative; /* stays on top, no float */
+    z-index: 5;
+  }
+
+  /* ======== STARS (blink only, no layout change) ======== */
+  .star{
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.85;
+    pointer-events: none;
+    animation: twinkle var(--tw,2.4s) ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 2px #fff);
+  }
+
+  @keyframes twinkle {
+    0%   { opacity: 0.15; transform: translateZ(0) scale(0.9); }
+    50%  { opacity: 1;    transform: translateZ(0) scale(1.05); }
+    100% { opacity: 0.3;  transform: translateZ(0) scale(0.95); }
+  }
+
+  /* ======== STRONGER FLOAT (transform only) ======== */
+  /* Tip: we only animate transform so the original place stays intact */
+  .earth, .saturn, .venus, .mercury, .spaceship1 {
+    will-change: transform;
+  }
+
+  /* each gets a slightly different pattern so it feels organic */
+  @keyframes floatA {
+    0%   { transform: translate3d(0,   0, 0)   rotate(0deg); }
+    25%  { transform: translate3d(18px,-28px,0) rotate(1.2deg); }
+    50%  { transform: translate3d(0,  -38px,0)  rotate(0deg); }
+    75%  { transform: translate3d(-16px,-18px,0) rotate(-1deg); }
+    100% { transform: translate3d(0,   0, 0)   rotate(0deg); }
+  }
+  @keyframes floatB {
+    0%   { transform: translate3d(0,0,0) rotate(0); }
+    50%  { transform: translate3d(26px,22px,0) rotate(1.5deg); }
+    100% { transform: translate3d(0,0,0) rotate(0); }
+  }
+  @keyframes floatC {
+    0%   { transform: translate3d(0,0,0) rotate(0); }
+    33%  { transform: translate3d(-22px,18px,0) rotate(-1.2deg); }
+    66%  { transform: translate3d(20px,-24px,0) rotate(0.8deg); }
+    100% { transform: translate3d(0,0,0) rotate(0); }
+  }
+  @keyframes floatShip {
+    0%   { transform: translate3d(0,0,0) rotate(30deg); }
+    30%  { transform: translate3d(24px,-22px,0) rotate(33deg); }
+    60%  { transform: translate3d(-28px,-8px,0) rotate(28deg); }
+    100% { transform: translate3d(0,0,0) rotate(30deg); }
+  }
+
+  /* Apply stronger motion (durations vary, no position changes) */
+  .earth    { animation: floatA 6.5s ease-in-out infinite; }
+  .saturn   { animation: floatB 7.2s ease-in-out infinite; }
+  .venus    { animation: floatC 5.4s ease-in-out infinite; }
+  .mercury  { animation: floatB 8.0s ease-in-out infinite reverse; }
+  .spaceship1 { animation: floatShip 9.2s ease-in-out infinite; }
+
+  /* Optional subtle space haze */
+  .dreamspace::after{
+    content:"";
+    position:absolute; inset:-20%;
+    background: radial-gradient(closest-side, rgba(255,255,255,0.04), transparent 70%),
+                radial-gradient(closest-side, rgba(120,180,255,0.05), transparent 60%);
+    filter: blur(30px);
+    pointer-events:none;
+  }
+  .shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(-45deg, white, rgba(255,255,255,0));
+  opacity: 0.8;
+  transform: rotate(45deg);
+  pointer-events: none;
+  animation: shoot 1s linear forwards;
+}
+
+@keyframes shoot {
+  0%   { transform: translate(0,0) rotate(45deg); opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translate(-400px,400px) rotate(45deg); opacity: 0; }
+}
+.hall{
+  height: 100vh;
+  width: 100%;
+  background-color: #ADCFF7;
+  display: flex;
+  flex-direction: row;
+}
+.windowinhall{
+  height: 250px;
+  width: 150px;
+  margin-top: 130px;
+  margin-left: 10px;
+}
+.ktrg{
+  height: 250px;
+  width: 500px;
+  margin-left: -150px;
+  margin-top: 480px;
+}
+.cp1{
+  height: 500px;
+  width: 500px;
+  margin-top: 00px;
+  margin-left: -450px;
+}
+.tree2{
+  height: 200px;
+  width: 100px;
+  margin-left: -520px;
+  margin-top: 500px;
+}
+.cp2{
+  height: 500px;
+  width: 500px;
+  margin-top: 20px;
+  margin-left: 180px;
+}
+.lamp3{
+  height: 300px;
+  width: 150px;
+  margin-left: -100px;
+  margin-top: 170px;
+}
+.tv{
+  height: 400px;
+  width: 450px;
+  margin-top: 330px;
+  margin-left: -400px;
+}
+.rigbywithfrnd{
+  height: 300px;
+  width: 600px;
+  margin-top: 350px;
+  margin-left: 0px;
+}
+.enddiv {
+  height: 100vh;
+  width: 100%;
+  background-image: url(end.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  z-index: 1;
+}
+
+.txt {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-family: "Cinzel", serif;
+  font-weight: 800;
+  font-size: 3rem; /* smaller, more elegant */
+  text-align: center;
+  opacity: 0;
+  letter-spacing: 3px;
+  line-height: 1.4;
+}
+
+.txt p {
+  font-size: 45px;
+  margin: 0.7rem 0;
+}
+.kitchen-scene{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(210, 198, 183);
+}
+.ketchen-top{
+  height: 35vh;
+  width: 100%;
+  background-color: #2b9370;
+  display: flex;
+  flex-direction: row;
+}
+.wdkt{
+  height: 200px;
+  width: 150px;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+.knife{
+  height: 100px;
+  width: 180px;
+  margin-left: 300px;
+  margin-top: 130px;
+}
+.ktshelf{
+  height: 100px;
+  width: 150px;
+  margin-top: 120px;
+  margin-left: 0px;
+}
+.kitchen-bottom{
+  display: flex;
+  flex-direction: row;
+}
+.kttable{
+  height: 300px;
+  width: 400px;
+  margin-top: 160px;
+  margin-left: 130px;
+}
+.ktrug{
+  height: 200px;
+  width: 350px;
+  margin-top: 250px;
+  margin-left: 100px;
+}
+.ktcounter{
+  height: 400px;
+  width: 700px;
+  margin-top: -200px;
+  margin-left: -300px;
+}
+.ktbin{
+  height: 150px;
+  width: 70px;
+  margin-top: 280px;
+  margin-left: -300px;
+}
+.studyroom{
+  height: 100vh;
+  width: 100%;
+  background-color: cadetblue;
+}
+.uprt{
+  height: 38vh;
+  background-color: #a0c15e;
+  display: flex;
+  flex-direction: row;
+}
+.wd{
+  height: 200px;
+  width: 150px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.tb1{
+  height: 400px;
+  width: 450px;
+}
+.tbch{
+  height: 450px;
+  width: 500px;
+  margin-left: -10px;
+}
+.tb2{
+  height: 380px;
+  width: 380px;
+  margin-left:20px ;
+}
+.lwrt{
+  display:flex;
+  flex-direction: row;
+}
+.lmp{
+  height: 400px;
+  width: 180px;
+  margin-top: 0px;
+  margin-left: 30px;
+}
+.ch{
+  height: 300px;
+  width: 140px;
+  margin-top: 130px;
+  margin-left: 300px;
+}
+.rg{
+  height: 250px;
+  width: 500px;
+  margin-top: 180px;
+  margin-left: 300px;
+}
+.kttable {
+  position: relative;
+  z-index: 5; /* table in front */
+}
+
+.rigby {
+  position: absolute;
+  bottom: 180px; /* adjust to match table height */
+  left: 300px;   /* adjust to center behind */
+  z-index: 1;    /* behind table */
+  height: 200px; /* size accordingly */
+}
+
+.rigbykitchen {
+      position: absolute;
+      width: 230px; 
+      height: 300px;     /* adjust size */
+      bottom: 220px;     /* sits on rug */
+      left: 20%;
+      transform: translateX(-50%);
+      z-index: 1;        /* behind table */
+      opacity: 0;
+    }
+
+    .kttable {
+      position: relative;
+      z-index: 2;        /* table above Rigby */
+    }
+
+.sleep-room {
+  height: 100vh;
+  width: 100%;
+  background-color: #7c6ebf;
+  position: relative;
+  overflow: hidden;
+}
+
+.sleepingrgby {
+  margin-top: 250px;
+  margin-left: 450px;
+  height: 450px;
+  width: 650px;
+  position: relative;
+  z-index: 1;
+}
+
+.rigbyschool {
+  position: absolute;
+  top: -300px; /* start offscreen above */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  opacity: 0;
+  z-index: 2;
+}
